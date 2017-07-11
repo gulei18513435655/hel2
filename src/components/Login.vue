@@ -2,7 +2,8 @@
   <div class="login">
     <pageHead></pageHead>
     <loginContent></loginContent>
-    <loginContentBox></loginContentBox>
+    <components :is="pagelogin"></components>
+    <!-- <loginContentBox></loginContentBox> -->
   </div>
 </template>
 
@@ -10,15 +11,19 @@
 import pageHead from './pageHead'
 import loginContent from './loginContent'
 import loginContentBox from './loginContentBox'
+import registerContentBox from './registerContentBox'
 export default {
   components: {
     pageHead,
     loginContent,
-    loginContentBox
+    loginContentBox,
+    registerContentBox
   },
   name: 'pagelogin',
   data () {
     return {
+      pagelogin: 'loginContentBox'
+      // pageregister: 'registerContentBox'
     }
   }
 }
