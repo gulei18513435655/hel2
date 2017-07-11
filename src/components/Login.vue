@@ -1,7 +1,7 @@
 <template>
   <div class="login">
     <pageHead></pageHead>
-    <loginContent></loginContent>
+    <loginContent :logo="states"></loginContent>
     <components :is="pagelogin"></components>
     <!-- <loginContentBox></loginContentBox> -->
   </div>
@@ -22,6 +22,7 @@ export default {
   name: 'pagelogin',
   data () {
     return {
+      states: 'loginContentBox',
       pagelogin: 'loginContentBox'
       // pageregister: 'registerContentBox'
     }

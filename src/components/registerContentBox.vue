@@ -2,12 +2,12 @@
   <div class="login-content-box">
     <ul>
       <li>
-        <input type="text" class="input-phone" placeholder="手机号或邮箱">
-        <p class="error-text">请输入正确的邮箱或手机号</p>
+        <input type="text" class="input-phone" placeholder="手机号">
+        <p class="error-text">手机号格式错误</p>
       </li>
       <li>
-        <input type="text" class="input-phone" placeholder="请输入密码">
-        <p class="error-text imwap-visibility js-showpw">请输入6-16位密码，区分大小写，不能使用空格！</p>
+        <input type="text" class="input-phone" placeholder="请输入验证码">
+        <p class="error-text imwap-visibility js-showpw">请输入正确的验证码</p>
       </li>
     </ul>
   </div>
