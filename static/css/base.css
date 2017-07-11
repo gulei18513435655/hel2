@@ -1,0 +1,67 @@
+@charset "utf-8";
+*{-webkit-tap-highlight-color:transparent;outline:0;vertical-align:baseline;}
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;vertical-align:baseline;}
+html,body{height:100%;}
+body{margin:0 auto;min-width:320px;max-width:750px;font-family:Microsoft YaHei,Helvetica,STHeiti STXihei,Microsoft JhengHei,Arial;line-height:1.5;color:#333;-webkit-text-size-adjust:100% !important;text-size-adjust:100% !important;}
+article,aside,dialog,figure,footer,header,hgroup,nav,section,blockquote{display:block;}
+img{border:0 none;vertical-align:top;}
+i,em,strong{font-style:normal;font-weight:normal;}
+ol,ul{list-style:none;}
+ins{text-decoration:underline;}
+del{text-decoration:line-through;}
+input,select,button,h1,h2,h3,h4,h5,h6{font-size:100%;font-family:inherit;}
+input{border-radius:0;box-shadow:none;}
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button{-webkit-appearance:none;}
+textarea{-webkit-appearance:none;overflow-y:auto;overflow-x:hidden;resize:none;} 
+ select{appearance:none;-ms-appearance:none;-moz-appearance:none;-webkit-appearance:none;} 
+select::-ms-expand{display:none;} 
+
+table{border-collapse:collapse;border-spacing:0;}
+a{text-decoration:none;color:inherit;}
+
+/* initial */
+.clearfix::before,
+.clearfix::after{content:"";display:block;clear:both;}
+.fl{float:left;}
+.fr{float:right;}
+.pr{position:relative;}
+.pa{position:absolute;}
+.hide{display:none;}
+.hidden{visibility:hidden;}
+.w{width:1190px;margin-left:auto;margin-right:auto;}
+.tc{text-align:center;}
+.tl{text-align:left;}
+.tr{text-align:right;}
+
+html {font-size:16px;}
+@media screen and (min-width:375px) {
+    html {
+        /* iPhone6的375px尺寸作为16px基准，414px正好18px大小,600 20px */
+        font-size: calc(100% + 2 * (100vw - 375px) / 39);
+        font-size: calc(16px + 2 * (100vw - 375px) / 39);
+    }
+}
+@media screen and (min-width: 414px) {
+    html {
+        /* 414px-1000px每100像素宽字体增加1px(18px-22px) */
+        font-size: calc(112.5% + 4 * (100vw - 414px) / 586);
+        font-size: calc(18px + 4 * (100vw - 414px) / 586);
+    }
+}
+@media screen and (min-width: 600px) {
+    html {
+        /* 600px-1000px每100像素宽字体增加1px(20px-24px) */
+        font-size: calc(125% + 4 * (100vw - 600px) / 400);
+        font-size: calc(20px + 4 * (100vw - 600px) / 400);
+    }
+}
+@media screen and (min-width: 1000px) {
+    html {
+        /* 1000px往后是每100像素0.5px增加 */
+        font-size: calc(137.5% + 6 * (100vw - 1000px) / 1000);
+        font-size: calc(22px + 6 * (100vw - 1000px) / 1000);
+    }
+}
