@@ -1,8 +1,8 @@
 <template>
   <div class="login">
     <pageHead></pageHead>
-    <loginContent :logo="states"></loginContent>
-    <components :is="pagelogin"></components>
+    <loginContent @cha="changeContent"></loginContent>
+    <components :is="states"></components>
     <!-- <loginContentBox></loginContentBox> -->
   </div>
 </template>
@@ -24,13 +24,17 @@ export default {
     return {
       states: 'loginContentBox',
       pagelogin: 'loginContentBox'
-      // pageregister: 'registerContentBox'
+    }
+  },
+  methods: {
+    changeContent: function (componentsName) {
+      this.states = componentsName
+      console.log(this.states)
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 </style>

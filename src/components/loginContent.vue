@@ -1,7 +1,7 @@
 <template>
   <div class="loginContent">
     <p class="login-lind-box">
-      <a href="javascript:;" :class="{'active':Active1}" @click="show(1)">登录</a>{{logo}}
+      <a href="javascript:;" :class="{'active':Active1}" @click="show(1)">登录</a>
       <a href="javascript:;" :class="{'active':Active2}" @click="show(2)">注册</a>
     </p>
   </div>
@@ -20,9 +20,11 @@ export default {
   methods: {
     show: function (a) {
       if (a === 1) {
+        this.$emit('cha', 'loginContentBox')
         this.Active1 = true
         this.Active2 = false
       } else {
+        this.$emit('cha', 'registerContentBox')
         this.Active1 = false
         this.Active2 = true
       }
